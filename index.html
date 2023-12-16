@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snowfall</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    .snowflake {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      opacity: 0.8;
+      animation: snowfall linear infinite;
+    }
+    @keyframes snowfall {
+      0% {
+        transform: translateY(-10vh);
+      }
+      100% {
+        transform: translateY(110vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="snowflakes"></div>
+
+  <script>
+    const snowflakesContainer = document.querySelector('.snowflakes');
+    const numberOfSnowflakes = 200; // Adjust this for the desired number of snowflakes
+
+    for (let i = 0; i < numberOfSnowflakes; i++) {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflakesContainer.appendChild(snowflake);
+
+      const randomPosition = Math.random() * 100;
+      const randomDuration = (Math.random() * 10) + 10;
+
+      snowflake.style.left = `${randomPosition}vw`; // Using viewport width
+      snowflake.style.animationDuration = `${randomDuration}s`;
+    }
+  </script>
+</body>
+</html>
+
+<html lang="en">
+
+        <!-- Add more snowflakes as needed -->
+      </div>
+      
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Image Flipper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- First row with 5 boxes -->
+      <div class="box" onclick="flip(this, 1)"></div>
+      <div class="box" onclick="flip(this, 2)"></div>
+      <div class="box" onclick="flip(this, 3)"></div>
+      <div class="box" onclick="flip(this, 4)"></div>
+      <div class="box" onclick="flip(this, 5)"></div>
+    </div>
+    <div class="row">
+      <!-- Second row with 5 boxes -->
+      <div class="box" onclick="flip(this, 6)"></div>
+      <div class="box" onclick="flip(this, 7)"></div>
+      <div class="box" onclick="flip(this, 8)"></div>
+      <div class="box" onclick="flip(this, 9)"></div>
+      <div class="box" onclick="flip(this, 10)"></div>
+    </div>
+    <div class="row">
+      <!-- Third row with 3 boxes -->
+      <div class="box" onclick="flip(this, 11)"></div>
+      <div class="box" onclick="flip(this, 12)"></div>
+      <div class="box" onclick="flip(this, 13)"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* Update container background and font color */
+body {
+    background-color: #f2f6f9; /* Light blue background */
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark text color */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Adjust the width to fit your design */
+    max-width: 800px; /* Limit maximum width */
+    margin: 20px auto;
+    background-color: #fff; /* White container background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .box {
+    width: calc(20% - 10px); /* Adjust size according to your layout */
+    height: 120px; /* Adjust height as needed */
+    background-color: #d91010; /* Red box background */
+    cursor: pointer;
+    perspective: 1000px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px; /* Rounded corners for boxes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+  }
+  
+  .flipped {
+    transform: rotateY(360deg);
+  }
+  
+  /* Snowflake animation */
+  @keyframes snowflake {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(120vh); /* Falling effect */
+    }
+  }
+  
+  .snowflake {
+    position: fixed;
+    top: -20px; /* Start above the screen */
+    left: calc(100vw * var(--random-x)); /* Random horizontal position */
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: snowflake var(--duration) linear infinite;
+  }
+ 
+  body {
+    margin: 0;
+    overflow: hidden;
+    background-image: url('https://pbs.twimg.com/media/FGvqPhdXEAY_1-D.png:large');
+    background-size: 2048px 1024px; /* Set the size of the background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  
+ 
+/* Existing styles... */
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-image: url('https://pbs.twimg.com/media/FGvqPhdXEAY_1-D.png:large');
+    background-size: 2048px 1024px;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .snowflake {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    opacity: 0.8;
+    animation: snowfall linear infinite;
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-10vh);
+    }
+    100% {
+      transform: translateY(110vh);
+    }
+  }
+  
+  /* Adjust snowflake positions and animations for variety */
+  .snowflake:nth-child(1) {
+    left: 5%;
+    animation-duration: 18s;
+    animation-delay: 0s;
+  }
+  
+  .snowflake:nth-child(2) {
+    left: 15%;
+    animation-duration: 20s;
+    animation-delay: 2s;
+  }
+  
+  .snowflake:nth-child(3) {
+    left: 25%;
+    animation-duration: 22s;
+    animation-delay: 4s;
+  }
+  
+  /* Add more snowflakes and adjust positions and animations as desired */
+  /* Existing styles... */
+
+/* Existing styles... */
+
